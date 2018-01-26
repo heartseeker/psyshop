@@ -29,6 +29,7 @@ export const routes: Routes = [
     CommonModule,
     AngularFireAuthModule,
     [RouterModule.forRoot(routes)],
+    ReactiveFormsModule,
     FormsModule,
   ],
   providers: [
