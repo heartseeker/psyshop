@@ -1,0 +1,54 @@
+<section class="container">
+  <div class="columns">
+    <div class="column is-four-fifths">
+      <div class="box" *ngFor="let i of [1,2,3,4,5]">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+            </figure>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+              </p>
+            </div>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <a class="level-item">
+                  <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                </a>
+                <a class="level-item">
+                  <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+                </a>
+                <a class="level-item">
+                  <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                </a>
+              </div>
+            </nav>
+          </div>
+        </article>
+      </div>
+
+      <!-- Pagination -->
+      <nav class="pagination is-right" role="navigation" aria-label="pagination">
+        <a class="pagination-previous">Previous</a>
+        <a class="pagination-next">Next page</a>
+        <ul class="pagination-list">
+          <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+          <li><span class="pagination-ellipsis">&hellip;</span></li>
+          <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+          <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+          <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+          <li><span class="pagination-ellipsis">&hellip;</span></li>
+          <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+        </ul>
+      </nav>
+
+    </div>
+    <div class="column">Auto</div>
+  </div>
+</section>

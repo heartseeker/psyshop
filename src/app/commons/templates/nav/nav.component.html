@@ -1,0 +1,41 @@
+<div class="hero-head">
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" routerLink="/">
+          <img src="http://bulma.io/images/bulma-type-white.png" alt="Logo">
+        </a>
+
+        <span class="navbar-burger burger" (click)="toggle = !toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      
+      <div id="navbarMenu" class="navbar-menu" [ngClass]="{'is-active': toggle}">
+
+          <div class="navbar-start">
+            <a class="navbar-item" routerLink="/login">
+              Doctor
+            </a>
+            <a class="navbar-item" routerLink="/login">
+              Client
+            </a>
+          </div>
+        
+        <div class="navbar-end">
+          <a class="navbar-item is-active" routerLinkActive="is-active" routerLink="/">
+            Home
+          </a>
+          <a class="navbar-item" routerLinkActive="is-active">
+            Examples
+          </a>
+          <a class="navbar-item" routerLinkActive="is-active">
+            Documentation
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
