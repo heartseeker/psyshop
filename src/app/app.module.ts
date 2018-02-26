@@ -22,7 +22,7 @@ import { RegistrationComponent } from './clients/registration/registration.compo
 
 // Modules
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from './material/material.module';
 import { ClientsModule } from './clients/clients.module';
 
 
