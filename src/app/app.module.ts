@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { DoctorListComponent } from './commons/templates/doctor-list/doctor-list.component';
 
+import { ServiceWorkerModule } from '@angular/service-worker';
+
 
 const routes: Routes = [
   { path: '', component: PublicHomeComponent },
@@ -35,6 +37,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,

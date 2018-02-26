@@ -1,5 +1,5 @@
 <section class="hero is-info is-medium is-bold">
     <app-nav></app-nav>
-    <app-hero *ngIf="_location.path() == ''"></app-hero>
+    <app-hero *ngIf="location.path() == ''"></app-hero>
 </section>
 <router-outlet></router-outlet>

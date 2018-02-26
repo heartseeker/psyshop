@@ -9,6 +9,6 @@ import { Location } from '@angular/common';
 })
 export class AppComponent {
 
-  constructor(private _location: Location) {
+  constructor(public location: Location) {
   }
 }
