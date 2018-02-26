@@ -1,0 +1,107 @@
+<section class="container">
+  <div class="columns features">
+    <div class="column is-full">
+      <div class="box">
+        <mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper">
+          <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+              <ng-template matStepLabel>Client Information Form</ng-template>
+              <div class="field">
+                  <mat-form-field>
+                    <input matInput placeholder="Full Name" formControlName="fullname" required>
+                  </mat-form-field>
+                </div>
+                  
+                <div class="field">
+                  <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="Date of birth">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </div>
+      
+                <div class="field">
+                  <mat-form-field>
+                    <input matInput placeholder="Street address">
+                  </mat-form-field>
+                </div>
+      
+                <div class="field is-horizontal">
+                  <div class="field-body">
+                    <div class="field">
+                      <mat-form-field>
+                        <input matInput placeholder="City">
+                      </mat-form-field>
+                    </div>
+                    <div class="field">
+                      <mat-form-field>
+                        <input matInput placeholder="Zip code">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="field">
+                  <mat-form-field>
+                    <input matInput placeholder="Phone">
+                  </mat-form-field>
+                </div>
+      
+                <div class="field">
+                  <mat-form-field>
+                    <input matInput placeholder="Marital Status">
+                  </mat-form-field>
+                </div>
+      
+                <div class="field">
+                  <mat-form-field>
+                    <input matInput placeholder="Education">
+                  </mat-form-field>
+                </div>
+      
+                <div class="field">
+                  <mat-form-field>
+                    <input matInput placeholder="Occupation">
+                  </mat-form-field>
+                </div>
+      
+                <div class="field">
+                  <div class="control is-expanded">
+                    <mat-form-field>
+                      <input matInput placeholder="Employer">
+                    </mat-form-field>
+                  </div>
+                </div>
+      
+                <div class="field">
+                  <button mat-raised-button color="primary" matStepperNext>Next</button>
+                </div>
+            </form>
+          </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+              <ng-template matStepLabel>Medication History</ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Address" formControlName="secondCtrl" required>
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            You are now done.
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+
+      </div>
+    </div>
+  </div>
+</section>
+  

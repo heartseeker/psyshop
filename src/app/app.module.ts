@@ -13,15 +13,24 @@ import { LoginComponent } from './commons/components/login/login.component';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material.module';
 import { DoctorListComponent } from './commons/templates/doctor-list/doctor-list.component';
 
+/*
+ * Clients
+ */
+import { RegistrationComponent } from './clients/registration/registration.component';
+
+// Modules
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { MaterialModule } from './material.module';
+import { ClientsModule } from './clients/clients.module';
+
 
 
 const routes: Routes = [
   { path: '', component: PublicHomeComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'clients/registration', component: RegistrationComponent },
   { path: 'doctors', component: DoctorListComponent }
 ];
 
@@ -42,6 +51,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
+    ClientsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
