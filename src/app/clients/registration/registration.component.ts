@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -12,14 +13,18 @@ export class RegistrationComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.firstFormGroup = this.fb.group({
       fullname: ['', Validators.required]
     });
     this.secondFormGroup = this.fb.group({
-      secondCtrl: ['', Validators.required]
+      question1: ['', Validators.required]
     });
+  }
+
+  finalstep() {
+    this.router.navigate(['/']);
   }
 }

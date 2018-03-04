@@ -79,23 +79,42 @@
             </form>
           </mat-step>
           <mat-step [stepControl]="secondFormGroup">
-            <form [formGroup]="secondFormGroup">
-              <ng-template matStepLabel>Medication History</ng-template>
-              <mat-form-field>
-                <input matInput placeholder="Address" formControlName="secondCtrl" required>
+            <div fxLayout="column" >
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Medication History</ng-template>
+                <mat-form-field class="is-full-width">
+                  <textarea 
+                  formControlName="question1" 
+                  required
+                  fxFlex
+                  matInput 
+                  placeholder="Please include specific behaviors or problems that you would like help with." 
+                  matTextareaAutosize matAutosizeMinRows="2"
+                  matAutosizeMaxRows="5">
+                </textarea>
               </mat-form-field>
+              <mat-form-field class="is-full-width">
+                <textarea 
+                fxFlex
+                matInput 
+                placeholder="What services or interventions have been previously performed (if any)?" 
+                matTextareaAutosize matAutosizeMinRows="2"
+                matAutosizeMaxRows="5">
+              </textarea>
+            </mat-form-field>
               <div>
                 <button mat-button matStepperPrevious>Back</button>
-                <button mat-button matStepperNext>Next</button>
+                <button mat-raised-button color="primary" mat-button matStepperNext>Next</button>
               </div>
             </form>
+          </div>
           </mat-step>
           <mat-step>
             <ng-template matStepLabel>Done</ng-template>
             You are now done.
             <div>
               <button mat-button matStepperPrevious>Back</button>
-              <button mat-button (click)="stepper.reset()">Reset</button>
+              <button mat-raised-button color="primary" mat-button mat-button (click)="finalstep()">Book</button>
             </div>
           </mat-step>
         </mat-horizontal-stepper>
