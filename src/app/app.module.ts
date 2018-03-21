@@ -15,6 +15,7 @@ import { LoginComponent } from './commons/components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DoctorListComponent } from './commons/templates/doctor-list/doctor-list.component';
 
+
 /*
  * Clients
  */
@@ -24,6 +25,7 @@ import { RegistrationComponent } from './clients/registration/registration.compo
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MaterialModule } from './material/material.module';
 import { ClientsModule } from './clients/clients.module';
+import { PaymentComponent } from './clients/payment/payment.component';
 
 
 
@@ -31,6 +33,7 @@ const routes: Routes = [
   { path: '', component: PublicHomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'clients/registration', component: RegistrationComponent },
+  { path: 'clients/payment', component: PaymentComponent },
   { path: 'doctors', component: DoctorListComponent }
 ];
 
