@@ -27,6 +27,7 @@ import { MaterialModule } from './material/material.module';
 import { ClientsModule } from './clients/clients.module';
 import { SchedulingComponent } from './clients/scheduling/scheduling.component';
 import { ScheduleComponent } from './clients/schedule/schedule.component';
+import { PaymentComponent } from './clients/payment/payment.component';
 
 
 
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'clients/registration', component: RegistrationComponent },
   { path: 'clients/scheduling', component: SchedulingComponent },
   { path: 'clients/schedule', component: ScheduleComponent },
+  { path: 'clients/payment', component: PaymentComponent },
   { path: 'doctors', component: DoctorListComponent }
 ];
 

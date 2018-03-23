@@ -5,6 +5,7 @@ import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SchedulingComponent } from './scheduling/scheduling.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ScheduleComponent } from './schedule/schedule.component';
   declarations: [
     RegistrationComponent,
     SchedulingComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    PaymentComponent
   ]
 })
 export class ClientsModule { }
