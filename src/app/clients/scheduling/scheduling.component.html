@@ -1,0 +1,130 @@
+<section class="container">
+  <div class="columns features">
+    <div class="column is-full">
+      <div class="box">
+
+        <div class="columns">
+
+          <div class="column">
+            <div class="rows">
+              <h1 class="title">Select a schedule</h1>
+              <div class="row">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="start" placeholder="Choose start date">
+                  <mat-datepicker-toggle matSuffix [for]="start"></mat-datepicker-toggle>
+                  <mat-datepicker #start></mat-datepicker>
+                </mat-form-field>
+              </div>
+              
+              <div class="row">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="end" placeholder="Choose end date">
+                  <mat-datepicker-toggle matSuffix [for]="end"></mat-datepicker-toggle>
+                  <mat-datepicker #end></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <button mat-raised-button color="primary" (click)="search = true">Search</button>
+            </div>
+          </div>
+
+          <ng-container *ngIf="search">
+            <div class="column is-one-third">
+
+              <div class="card"><!-- office card -->
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="http://maps.google.com/maps/api/staticmap?center=14.6564217,121.0323987&zoom=16&size=640x640&maptype=roadmap&sensor=false&language=&markers=color:red|label:none|14.6564217,121.0323987" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-48x48">
+                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">John Smith</p>
+                      <p class="subtitle is-6">@johnsmith</p>
+                    </div>
+                  </div>
+              
+                  <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <br>
+                    <h1 class="title is-5">Office Schedule</h1>
+                    <table class="table is-fullwidth">
+                      <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                      </tr>
+                      <tr>
+                        <td>Monday</td>
+                        <td>10:00 A.M. to 4:00 P.M.</td>
+                      </tr>
+                      <tr>
+                        <td>Wednesday</td>
+                        <td>9:00 A.M. to 6:00 P.M.</td>
+                      </tr>
+                    </table>
+                    <button mat-raised-button color="primary" class="is-full">Book</button>
+                  </div>
+                </div>
+              </div><!-- end office card -->
+            </div>
+
+            <div class="column is-one-third">
+
+              <div class="card"><!-- office card -->
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="http://maps.google.com/maps/api/staticmap?center=14.6564217,121.0323987&zoom=16&size=640x640&maptype=roadmap&sensor=false&language=&markers=color:red|label:none|14.6564217,121.0323987" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-48x48">
+                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">John Smith</p>
+                      <p class="subtitle is-6">@johnsmith</p>
+                    </div>
+                  </div>
+              
+                  <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <br>
+                    <h1 class="title is-5">Office Schedule</h1>
+                    <table class="table is-fullwidth">
+                      <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                      </tr>
+                      <tr>
+                        <td>Monday</td>
+                        <td>10:00 A.M. to 4:00 P.M.</td>
+                      </tr>
+                      <tr>
+                        <td>Wednesday</td>
+                        <td>9:00 A.M. to 6:00 P.M.</td>
+                      </tr>
+                    </table>
+                    <button mat-raised-button color="primary" class="is-full">Book</button>
+                  </div>
+                </div>
+              </div><!-- end office card -->
+            </div>
+          </ng-container>
+        </div><!-- end columns -->
+          
+      </div>
+    </div>
+  </div>
+</section>

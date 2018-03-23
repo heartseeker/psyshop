@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RegistrationComponent } from './registration/registration.component';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SchedulingComponent } from './scheduling/scheduling.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   declarations: [
-    RegistrationComponent
+    RegistrationComponent,
+    SchedulingComponent,
+    ScheduleComponent
   ]
 })
 export class ClientsModule { }
