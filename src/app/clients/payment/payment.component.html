@@ -1,0 +1,176 @@
+<section class="container">
+  <div class="columns features">
+    <div class="column is-full">
+      <div class="box">
+        <div class="rows">
+          <div class="row">
+            <h1 class="title">Your personal information</h1>
+            <hr>
+            <div class="columns">
+              <div class="column is-one-quarter">
+                <div class="rows">
+                  <div class="row">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Last name">
+                    </mat-form-field>
+                  </div>
+                  <div class="row">
+                    <mat-form-field class="full-width">
+                      <input matInput [matDatepicker]="picker" placeholder="Date of birth">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                  </div>
+                  <div class="row">
+                    <h4 class="subtitle is-6">Gender</h4>
+                    <mat-radio-group color="primary">
+                      <mat-radio-button value="1">Male</mat-radio-button>
+                      <mat-radio-button value="2">Female</mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="column is-one-quarter">
+                  <div class="rows">
+                    <div class="row">
+                      <mat-form-field class="full-width">
+                          <input matInput placeholder="First name">
+                      </mat-form-field>
+                    </div>
+                    <div class="row">
+                      <mat-form-field class="full-width">
+                          <input matInput placeholder="Email address" type="email">
+                      </mat-form-field>
+                    </div>
+                    <div class="row">
+                      <mat-form-field class="full-width">
+                          <input matInput placeholder="Phone number" type="email">
+                      </mat-form-field>
+                    </div>
+                  </div>
+              </div>
+              
+              <div class="column">
+              </div>
+            </div><!-- end columns -->
+          </div>
+          <div class="row card-info-row">
+            <h1 class="title">Your Card information</h1>
+            <h6 class="subtitle is-6">Please enter the details of your payment card</h6>
+            <hr>
+            <h3 class="title is-5">Credit Card Type</h3>
+            <div class="columns">
+              <div class="column is-two-thirds">
+                <div class="rows">
+                  <div class="row">
+                    <span class="card-span">
+                      <img class="card-icon" src="/assets/img/icon-card-visa.png" alt="Visa">
+                    </span>
+                    <span class="card-span">
+                      <img class="card-icon" src="/assets/img/icon-card-paypal.png" alt="Paypal">
+                    </span>
+                    <span class="card-span">
+                      <img class="card-icon" src="/assets/img/icon-card-mastercard.png" alt="Mastercard">
+                    </span>
+                  </div>
+                  <div class="row">
+                    <div class="rows">
+                      <div class="row">
+                        <div class="columns">
+                          <div class="column">
+                            <mat-form-field class="full-width">
+                              <input matInput placeholder="Enter your card number">
+                            </mat-form-field>
+                          </div>
+                          <div class="column">
+                            <mat-form-field class="full-width">
+                              <input matInput placeholder="Card holder name">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="columns">
+                          <div class="column">
+                            <h4 class="subtitle is-6 expiration-title">Expiration date</h4>
+                            <mat-form-field>
+                              <mat-select placeholder="Month" name="month">
+                                <mat-option *ngFor="let month of months" [value]="month.value">
+                                  {{month.label}}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+    
+                            <mat-form-field>
+                              <mat-select placeholder="Day" name="day">
+                                <mat-option *ngFor="let day of days" [value]="day">
+                                  {{ day }}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </div>
+
+                          <div class="column">
+                            <mat-form-field class="full-width">
+                              <input matInput placeholder="Security code">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="rows">
+                          <div class="row">
+                            <h4 class="title">Billing Address</h4>
+                            <h6 class="subtitle is-6">Please enter the details of your address</h6>
+                          </div>
+                          <div class="row">
+                            <div class="columns">
+                              <div class="column">
+                                <mat-form-field class="full-width">
+                                  <input matInput placeholder="City">
+                                </mat-form-field>
+                              </div>
+                              <div class="column">
+                                <mat-form-field class="full-width">
+                                  <input matInput placeholder="Country">
+                                </mat-form-field>
+                              </div>
+                              <div class="column">
+                                <mat-form-field class="full-width">
+                                  <input matInput placeholder="Zip code">
+                                </mat-form-field>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <mat-form-field class="full-width">
+                              <input matInput placeholder="Billing address">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="column">
+                  
+              </div>
+              <div class="column">
+                 
+              </div>
+              <div class="column">
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
