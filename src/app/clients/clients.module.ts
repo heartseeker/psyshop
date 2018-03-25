@@ -6,6 +6,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SchedulingComponent } from './scheduling/scheduling.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ClientDashboardComponent } from './dashboard/client-dashboard/client-dashboard.component';
+import { BookConfirmComponent } from './book-confirm/book-confirm.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { PaymentComponent } from './payment/payment.component';
     RegistrationComponent,
     SchedulingComponent,
     ScheduleComponent,
-    PaymentComponent
+    PaymentComponent,
+    ClientDashboardComponent,
+    BookConfirmComponent
   ]
 })
 export class ClientsModule { }

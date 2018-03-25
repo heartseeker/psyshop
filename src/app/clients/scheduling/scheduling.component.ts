@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-scheduling',
@@ -9,9 +11,12 @@ export class SchedulingComponent implements OnInit {
 
   search = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  book() {
+    this.router.navigate(['/clients/book-confirmation']);
+  }
 }

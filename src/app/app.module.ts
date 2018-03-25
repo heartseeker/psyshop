@@ -28,6 +28,8 @@ import { ClientsModule } from './clients/clients.module';
 import { SchedulingComponent } from './clients/scheduling/scheduling.component';
 import { ScheduleComponent } from './clients/schedule/schedule.component';
 import { PaymentComponent } from './clients/payment/payment.component';
+import { ClientDashboardComponent } from './clients/dashboard/client-dashboard/client-dashboard.component';
+import { BookConfirmComponent } from './clients/book-confirm/book-confirm.component';
 
 
 
@@ -38,6 +40,8 @@ const routes: Routes = [
   { path: 'clients/scheduling', component: SchedulingComponent },
   { path: 'clients/schedule', component: ScheduleComponent },
   { path: 'clients/payment', component: PaymentComponent },
+  { path: 'clients/book-confirmation', component: BookConfirmComponent },
+  { path: 'clients/dashboard', component: ClientDashboardComponent },
   { path: 'doctors', component: DoctorListComponent }
 ];
 
